@@ -405,6 +405,7 @@ declare module 'ccxt' {
         fetchUsedBalance (params?: Params): Promise<PartialBalances>;
         fetchWithdrawals (currency?: string, since?: number, limit?: number, params?: Params): Promise<Transaction[]>;
         getMarket (symbol: string): Market;
+        handleRestResponse (response: any, url: string, method: string, requestHeaders?: any, requestBody?: any): any;
         initRestRateLimiter (): void;
         iso8601 (timestamp: number | string): string;
         loadMarkets (reload?: boolean): Promise<Dictionary<Market>>;
